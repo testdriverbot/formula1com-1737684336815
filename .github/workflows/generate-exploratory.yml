@@ -49,7 +49,7 @@ jobs:
             cd $env:TEMP
             npm init -y
             npm install dashcam-chrome
-            Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "${{ inputs.website-url }}"
+            Start-Process "C:/Program Files/Google/Chrome/Application/chrome.exe" -ArgumentList "--start-maximized", "--load-extension=$(pwd)/node_modules/dashcam-chrome/build", "https://www.formula1.com/"
             exit
           create-pr: true
           pr-base: ${{ steps.extract_branch.outputs.branch }}
