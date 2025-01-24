@@ -41,7 +41,7 @@ jobs:
         run: echo "pr-branch=testdriver/exploratory-${{ github.run_id }}-${{ github.run_attempt }}" >> $GITHUB_OUTPUT
       - uses: testdriverai/action@main
         with:
-          key: ${{ secrets.key }}
+          key: ${{ secrets.TESTDRIVER_API_KEY }}
           prompt: |
             1. /generate web 10
             2. /summarize
