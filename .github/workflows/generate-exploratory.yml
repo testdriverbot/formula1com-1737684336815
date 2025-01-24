@@ -15,7 +15,7 @@ on:
         required: true
         description: The URL of the website to test
     secrets:
-      key:
+      TESTDRIVER_API_KEY:
         required: true
         description: The TestDriver API key
       GH_TOKEN:
