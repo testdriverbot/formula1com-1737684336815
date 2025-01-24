@@ -15,7 +15,7 @@ on:
         required: true
         description: The URL of the website to test
     secrets:
-      TESTDRIVER_API_KEY:
+      key:
         required: true
         description: testdriver API key
       GH_TOKEN:
@@ -41,7 +41,7 @@ jobs:
         run: echo "pr-branch=testdriver/exploratory-${{ github.run_id }}-${{ github.run_attempt }}" >> $GITHUB_OUTPUT
       - uses: testdriverai/action@main
         with:
-          key: ${{ secrets.TESTDRIVER_API_KEY }}
+          key: ${{ secrets.key }}
           prompt: |
             1. /generate web 10
             2. /summarize
